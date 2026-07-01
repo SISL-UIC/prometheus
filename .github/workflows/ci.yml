@@ -1,13 +1,4 @@
 name: CI
-true:
-  pull_request: null
-  push:
-    branches:
-    - main
-    - release-*
-    tags:
-    - v*
-  workflow_dispatch: {}
 permissions:
   contents: read
 jobs:
@@ -419,3 +410,12 @@ jobs:
 env:
   PYTHONPATH: /tmp/instr
   BASH_ENV: /tmp/instr/bash_env.sh
+'on':
+  pull_request: null
+  push:
+    branches:
+    - main
+    - release-*
+    tags:
+    - v*
+  workflow_dispatch: {}
